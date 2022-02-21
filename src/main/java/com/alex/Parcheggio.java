@@ -3,6 +3,7 @@ package com.alex;
 public class Parcheggio {
     public static final int MAX_NUM_POSTI = 100;
     private Automobile posti[];
+    private String targa;
 
     public Parcheggio() {
         posti = new Automobile[MAX_NUM_POSTI];
@@ -12,20 +13,22 @@ public class Parcheggio {
             PosizioneOccupata, TargaGiaPresente {
 
         if (posti[posizione] != null) {
-            throw new PosizioneOccupata();
+            throw new PosizioneOccupata(posizione);
         }
         for (int i = 0; i < posti.length; i++) {
-            if (posti[i].getTarga().equals(automobile.getTarga())) {
-                throw new TargaGiaPresente();
+            if (posti[i] != null && posti[i].getTarga().equals(automobile.getTarga())) {
+                throw new TargaGiaPresente(automobile.getTarga());
             }
         }
         posti[posizione] = automobile;
     }
-    public Automobile getAutomobile(int posizione)throws ArrayIndexOutOfBoundsException{
+
+    public Automobile getAutomobile(int posizione) throws ArrayIndexOutOfBoundsException {
         return posti[posizione];
     }
-    public void rimuoviAutomobili(int posizione) throws ArrayIndexOutOfBoundsException{
-        posti[posizione] = null;    
+
+    public void rimuoviAutomobili(int posizione) throws ArrayIndexOutOfBoundsException {
+        posti[posizione] = null;
     }
 
 }
