@@ -71,7 +71,7 @@ public class GestioneParcheggio {
         }catch (ArrayIndexOutOfBoundsException e){
             System.out.println("posizione invalida");
         }catch (NullPointerException e){
-            System.out.println("la posizione specificata e' vuota");;
+            System.out.println("la posizione specificata e' vuota");
         }
 
     }
