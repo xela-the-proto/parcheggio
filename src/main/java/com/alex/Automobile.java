@@ -1,14 +1,11 @@
 package com.alex;
 
 public class Automobile {
-    private
-    String targa;
+    private String targa;
     String marca;
     String modello;
 
-    
-
-    public Automobile(String targa, String marca, String modello){
+    public Automobile(String targa, String marca, String modello) {
         this.targa = targa;
         this.marca = marca;
         this.modello = modello;
@@ -26,9 +23,8 @@ public class Automobile {
         return this.modello;
     }
 
-    public String toString(){
-        return "targa:" + targa + "\nmarca:" + marca + "\nmodello" + modello; 
+    public String toString() {
+        return "targa:" + targa + "\nmarca:" + marca + "\nmodello" + modello;
     }
 
 }
-

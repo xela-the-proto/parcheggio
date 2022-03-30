@@ -38,18 +38,17 @@ public class GestioneParcheggio {
 
         } catch (NumberFormatException e) {
             System.out.println("numero inaccettabile");
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println("errore IO");
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("posizione invalida");
-        }catch (PosizioneOccupata e){
+        } catch (PosizioneOccupata e) {
             System.out.println("la posizione " + e.getPosizione() + " e' gia' occupata");
-        }catch (TargaGiaPresente e){
+        } catch (TargaGiaPresente e) {
             System.out.println("la targa " + e.getTarga() + " e' gia' presente");
         }
 
     }
-
 
     public static void visualizzazioneAutomobile() throws Exception {
         try {
@@ -66,11 +65,11 @@ public class GestioneParcheggio {
 
         } catch (NumberFormatException e) {
             System.out.println("numero inaccettabile");
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println("errore IO");
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("posizione invalida");
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println("la posizione specificata e' vuota");
         }
 
